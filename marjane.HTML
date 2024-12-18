@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="marjane.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Marjan - Cette Semaine Chez Marjan</title>
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="marjane-logo">
+           <img src="" alt="">
+            <img src="https://marjane.ma/icons/logo_marjane_market.svg">
+        </div>
+        <form class="search-form">
+            <i class="fa-solid fa-magnifying-glass" style="font-size: 20px; color: brown; cursor: pointer"></i>
+            <input type="text" placeholder="Rechercher un produit" class="search-input">
+        </form>
+        <ul class="nav-links">
+            <li><img src="courses.svg" alt=""><a href="#courses-en-ligne">Courses en ligne</a></li>
+            <li><img src="pro.svg" alt=""><a href="#promotions">Promotions</a></li>
+            <li><img src="carte marjan.svg" alt=""><a href="#carte-marjane">Carte Marjane</a></li>
+            <li><img src="Group.svg" alt=""><a href="#group">Group</a></li>
+        </ul>
+        <div class="icons">
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        
+    </nav>
+</header>
+
+<main>
+    <div class="breadcrumbs">
+        <p>Accueil > Marjane > Les offres de la semaine en magasin</p>
+    </div>
+    
+    <section class="hero">
+        <img src="https://api-ayaline.marjane.ma/cms/v2/assets/f84afd54-8f32-4117-9bca-ea085551a71c?quality=75&width=1920" alt="Banner" class="img-banner">
+    </section>
+    <div id="SL">
+            <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                }
+        
+                /* Slider Container */
+                .slider {
+                    position: relative;
+                    width: 80%;
+                    margin: auto;
+                    overflow: hidden;
+                }
+        
+                .slider-images {
+                    
+                    display: flex;
+                    transition: transform 0.5s ease;
+                }
+        
+                .slider-images img {
+                    width: 100%;
+                    height: auto;
+                }
+        
+                /* Navigation Arrows */
+                .prev, .next {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    cursor: pointer;
+                    font-size: 18px;
+                }
+        
+                .prev {
+                    left: 0;
+                }
+        
+                .next {
+                    right: 0;
+                }
+            </style>
+        </head>
+        <body>
+        
+        <div class="slider">
+            <div class="slider-images">
+                <!-- Tree Images -->
+                <img src="https://api-ayaline.marjane.ma/cms/v2/assets/3f3c4262-8085-422b-8f3f-c5e8ec81a75e?quality=75&width=1920" alt="Tree 1">
+                <img src="https://api-ayaline.marjane.ma/cms/v2/assets/f84afd54-8f32-4117-9bca-ea085551a71c?quality=75&width=1920" alt="Tree 2">
+                <img src="https://api-ayaline.marjane.ma/cms/v2/assets/1019fed6-39ba-47ee-b337-bb16b130c381?quality=75&width=1920" alt="Tree 3">
+                
+                
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        
+        <script>
+            let currentIndex = 0;
+        
+            // Get all the images in the slider
+            const images = document.querySelectorAll('.slider-images img');
+            
+            // Function to change slides
+            function moveSlide(direction) {
+                currentIndex += direction;
+                
+                // Loop around the images
+                if (currentIndex >= images.length) {
+                    currentIndex = 0;
+                }
+                if (currentIndex < 0) {
+                    currentIndex = images.length - 1;
+                }
+                
+                // Move the slider to the correct image
+                document.querySelector('.slider-images').style.transform = `translateX(${-currentIndex * 100}%)`;
+            }
+        
+            // Auto-slide every 5 seconds (5000 milliseconds)
+            setInterval(() => {
+                moveSlide(1);
+            }, 2000);  // Change every 5 seconds
+        </script>
+        
+        </body>
+        </html>
+        
+    </div>
+    
+    <section class="offers-section">
+        <h2>Les Offres Imbattables !</h2>
+        <div class="line"></div>
+        <div class="slider">
+        <div class="products">
+            <div class="p1"><img src="https://api-ayaline.marjane.ma/cms/v2/assets/95140f98-837f-4efd-8449-13cc405016a4?quality=75&width=1920" alt="" /></div>
+            <div class="p2"><img src="https://api-ayaline.marjane.ma/cms/v2/assets/efbe0d22-bd03-4db5-a3c2-bbf8a6ab1bfa?quality=75&width=1920" alt="" /></div>
+            <div class="p3"><img src="https://api-ayaline.marjane.ma/cms/v2/assets/89e912c2-d48c-40fb-9d22-3edda602cabd?quality=75&width=1920" alt="" /></div>
+            <div class="p4"><img src="https://api-ayaline.marjane.ma/cms/v2/assets/286995cb-ca5a-404f-b4e5-f2f4905905fd?quality=75&width=1920" alt="" /></div>
+        </div>
+        <button class="prev" onclick="prevslide()">&#10094;</button>
+        <button class="next" onclick="nextslide()">&#10095;</button>
+        </div>
+        <a href="#" class="btn-offers">TOUTES LES OFFERS</a>
+    </section>
+    
+    <section class="find-store">
+        <h2>Trouvez Votre Magasin</h2>
+        <div class="line"></div>
+        <div class="map-container">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.2894730571344!2d-7.589843084790192!3d33.57311058073459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d3074016c0fd%3A0xa58c8f2f286d5c7c!2sCasablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1699475178231!5m2!1sen!2sus"
+            allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        </section>
+
+        <section class="commitments">
+            <h2>Engagements Marjane</h2>
+            <div class="line"></div>
+            <div class="commitment-cards">
+                <div><img src="https://api-ayaline.marjane.ma/cms/v2/assets/6a3cb53b-2e02-4ae2-b6ef-188fc59f8953" alt="Mieux Manger">
+                    <p>Mieux Manger</p>
+                </div>
+                <div><img src="https://api-ayaline.marjane.ma/cms/v2/assets/e8e0ab06-2134-45a1-bbfc-312cdce5daa9" alt="Mieux Vivre">
+                    <p>Mieux Vivre</p>
+                </div>
+                <div><img src="https://api-ayaline.marjane.ma/cms/v2/assets/2973ec5f-8f06-4950-a957-bfb09d332da9" alt="Mieux Consommer">
+                    <p>Mieux Consommer</p>
+                </div>
+            </div>
+            <div class="options">
+                <ul class="op1">
+                    
+                        <h3>Informations légales</h3>
+                    
+                    <li><a href="">Engagements Marjane</a></li>
+                    <li><a href="">CGU & CGV</a></li>
+                    <li><a href="">Informations légales</a></li>
+                </ul>
+                <ul class="op2">
+                    <h3>À propos</h3>
+                    <li><a href="">Marjane Group</a></li>
+                    <li><a href="">Recrutement</a></li>
+                    <li><a href="">Fidélité</a></li>
+                    <li><a href="">SAV</a></li>
+                </ul>
+                <ul class="op3">
+                    <h3>Besoin d'aide ?</h3>
+                    <li>
+                        <h3><a href="">Nous contacter</a></h3>
+                    </li>
+                </ul>
+                <div class="appli">
+                    <h3>Téléchargez notre appli</h3>
+                    <p>Avec l'application Marjane, vous pouvez faire vos achats encore plus rapidement.</p>
+                    <div class="app2">
+                    <a href=""><img src="https://api-ayaline.marjane.ma/cms/v2/assets/f7898dbf-e909-40db-82c9-862d93df46df?quality=75&width=384" alt="Download on the App Store"></a>
+                    </div>
+                    <div class="app3">
+                    <a href=""><img src="https://api-ayaline.marjane.ma/cms/v2/assets/3325182a-48ef-48d2-89e9-599196cc3795?quality=75&width=384" alt="Get it on Google Play"></a>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="#"><img src="https://api-ayaline.marjane.ma/cms/v2/assets/e169d806-bdc5-42eb-bb45-ba33a89aa279?quality=75&width=96" alt="Facebook"></a>
+                        <a href="#"><img src="https://api-ayaline.marjane.ma/cms/v2/assets/33ed0dc4-ef92-4c30-8e61-944528b58f29?quality=75&width=96" alt="Instagram"></a>
+                        <a href="#"><img src="https://api-ayaline.marjane.ma/cms/v2/assets/0004f01a-3697-47f6-b82b-f03fa9197be5?quality=75&width=96" alt="LinkedIn"></a>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Marjane - Tous droits réservés - Mentions légales - Données personnelles</p>
+    </footer>
+
+</body>
+
+</html>
